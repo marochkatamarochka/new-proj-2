@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.footer__address {
+    color: #292929;
+
+
+    @include phones {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer-number-phone {
+    text-decoration: none;
+}

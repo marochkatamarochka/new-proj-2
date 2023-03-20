@@ -1,0 +1,20 @@
+.order-section {
+background: url(../img/bg2.jpg) center / cover no-repeat;
+color: #fff;
+position: relative;
+
+&::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.3);
+}
+}
+.order-section__main-title {
+    color: inherit;
+    position: relative;
+    z-index: 1;
+}
