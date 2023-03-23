@@ -1,5 +1,22 @@
 .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: rem(17px) 0;
+    background-color: #fff;
+
+    @include tablets {
+        padding: rem(28px) 0;
+    }
+    @include phones{
+
+    }
+}
+.footer__container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include phones {
         flex-direction: column;
@@ -7,16 +24,21 @@
 }
 
 .footer__address {
-    color: #292929;
+font-style: normal;
 
 
     @include phones {
-        margin-bottom: 10px;
+        margin-bottom: rem(10px);
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
-.footer-number-phone {
-    text-decoration: none;
+.footer__text {
+    font-size: rem(21px);
+    line-height: rem(24px);
+
+    @include phones{
+        margin-bottom: rem(6px);
+    }
 }

@@ -29,15 +29,26 @@ max-height: 100%;
     line-height: rem(32px);
     color: #292929;
     margin-bottom: rem(20px);
+
+    @include tablets {
+        margin-bottom: rem(7px);
+    }
+    @include phones{
+        margin-bottom: rem(10px);
+    }
 }
 .benefit__text {
 font-weight: 300;
 line-height: rem(22px);
+
+@include phones{
+    padding-top: rem(7px);
+}
 }
 
 .benefit__image {
     @include phones {
     margin-bottom: 0;
-    margin-right: rem(20px);
+    margin-right: rem(12px);
     }
 }

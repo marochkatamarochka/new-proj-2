@@ -10,8 +10,9 @@ $phones: 480px;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
 @import "normalize";
 
-@import "components/layout";
 @import "components/media";
+@import "components/layout";
+
 
 //components
 @import "components/hero";
@@ -32,3 +33,6 @@ $phones: 480px;
 @import "components/fixed-menu";
 @import "components/hamburger";
 @import "components/footer";
+@import "components/map";
+@import "components/socials";
+@import "components/phone-number";

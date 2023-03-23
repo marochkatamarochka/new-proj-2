@@ -1,8 +1,11 @@
 .features {
     display: flex;
     align-items: center;
-    color: #fff;
     margin-top: rem(65px);
+
+    @include tablets {
+        display: none;
+    }
 }
 .features__item {
     margin-right: rem(38px);

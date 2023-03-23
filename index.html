@@ -48,9 +48,9 @@
                             </ul>
                         </nav>
                         <a href="tel: +78009039090" class="phone-number header__phone-number">
-                            <span class="phone-number__icon">
-                                <img src="./img/coll.png" class="phone-number__icon-elem" alt="">
-                            </span>
+                            <svg class="phone-number__icon">
+                                <use xlink:href="img/icons/sprite.svg#phones" />
+                            </svg>
                             <span class="phone-number__text">8 800 903 90 90</span>
                         </a>
                         <a href="#" class="hamburger">
@@ -268,25 +268,55 @@
                     </form>
                 </div>
             </section>
-            <section class="map">
-                <div class="maps">
-<img src="./img/map.png" class="maps__me" alt="">
+            <section class="section map">
+                <div class="map__box">
+                    <img src="./img/map.png" class="map__image" alt="">
                 </div>
+                <footer class="footer">
+                    <div class="container footer__container">
+                        <address class="footer__address">
+                            <p class="footer__text">Москва, ул.Новый Арбат, д.31/12</p>
+                            <a href="tel: +78009039090" class="phone-number">
+                                <svg class="phone-number__icon">
+                                    <use xlink:href="img/icons/sprite.svg#phones" />
+                                </svg>
+                                <span class="phone-number__text">8 800 903 90 90</span>
+                            </a>
+                        </address>
+                        <ul class="socials">
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__icon">
+                                        <use xlink:href="img/icons/sprite.svg#vk"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__icon">
+                                        <use xlink:href="img/icons/sprite.svg#fb"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__icon">
+                                        <use xlink:href="img/icons/sprite.svg#in"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg class="socials__icon">
+                                        <use xlink:href="img/icons/sprite.svg#tv"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
             </section>
-            <footer class="footer">
-<div class="footer__address">
-    <address>Москва, ул.Новый Арбат, д.31/12</address>
 
-<div class="footer__number">
-    <a href="tel: +78009039090" class="footer-number-phone footer__phone-number">
-        <span class="footer-number__icon">
-            <img src="./img/phone-litle.png" class="footer-number__icon-elem" alt="">
-        </span>
-        <span class="footer-number__footer-text">8 800 903 90 90</span>
-    </a>
-</div>
-</div>
-            </footer>
             <nav class="fixed-menu">
                 <ul class="fixed-menu__list">
                     <li class="fixed-menu__item fixed-menu__item--active">

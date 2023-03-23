@@ -4,12 +4,9 @@
 html {
     font-size: $baseFontSize;
 
-  /*  @include tablets {
-        font-size: $baseFontSize - 1px;
-    }
-    @include phones {
-        font-size: $baseFontSize - 2px;
-    }*/
+@include phones{
+    font-size: 3.75vmin;
+}
 }
 html, body {
     height: 100%;
@@ -20,6 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
+    color: #292929;
 }
 .wrapper { 
     position: relative;

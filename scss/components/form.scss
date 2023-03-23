@@ -32,6 +32,10 @@ z-index: 1;
 
     &--textarea {
 margin-bottom: rem(38px);
+
+@include tablets {
+    margin-bottom: rem(27px);
+}
     }
 }
 .form__block {
@@ -48,11 +52,18 @@ margin-bottom: rem(38px);
     padding: rem(15px) rem(11px);
     border: solid rem(3px) transparent;
 
+    @include tablets {
+        padding: rem(5px) rem(9px);
+    }
 
     &--textarea {
         height: rem(152px);
         resize: none;
         display: block;
+
+        @include tablets {
+            height: rem(82px);
+        }
     }
     &:focus {
         border-color: 
@@ -65,18 +76,27 @@ margin-bottom: rem(38px);
     flex-wrap: wrap;
     margin-bottom: rem(17px);
 
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+        @include phones {
+        justify-content: center;
+        }
     &--margin-bottom {
         margin-bottom: rem(44px);
+        @include tablets{
+            margin-bottom: rem(38px);
+        }
     }
 
-    @include phones {
-    justify-content: center;
-    }
 }
 .form__controls-radio {
     margin-right: rem(19px);
 }
 .form__btns {
 display: flex;
-justify-content: center;
+
+@include tablets {
+    justify-content: center;
+}
 }

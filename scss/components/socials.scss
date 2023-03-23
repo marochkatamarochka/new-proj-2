@@ -1,0 +1,36 @@
+.socials {
+    display: flex;
+    align-items: center;
+
+    @include tablets{
+        transform: translateX(rem(-20px));
+    }
+    @include phones{
+        transform: initial;
+    }
+}
+.socials__item {
+    margin-right: rem(14px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+    
+    @include phones{
+        margin-right: rem(16px);
+         }
+}
+.socials__link {
+    display: block;
+}
+.socials__icon {
+    width: rem(20px);
+    height: rem(20px);
+    color: #B3B3B3;
+    transition: color .3s;
+  
+    &:hover {
+        color: #292929;
+    }
+
+}
