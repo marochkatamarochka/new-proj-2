@@ -17,8 +17,12 @@ position: relative;
     color: inherit;
     position: relative;
     z-index: 1;
+    margin-bottom: rem(32px);
 
     @include tablets {
         margin-bottom: rem(30px);
+    }
+    @include phones{
+        margin-bottom: rem(39px);
     }
 }

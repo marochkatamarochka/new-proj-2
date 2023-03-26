@@ -21,6 +21,9 @@
         top: rem(58px);
         right: 0;
         transform: translate(50%);
+      @include tablets {
+        display: none;
+      }
 
         @include phones {
             background: none;

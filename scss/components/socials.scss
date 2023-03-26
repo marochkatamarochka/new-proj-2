@@ -29,8 +29,11 @@
     color: #B3B3B3;
     transition: color .3s;
   
-    &:hover {
-        color: #292929;
-    }
+    // &:hover {
+    //     color: #292929;
+    // }
 
+}
+.socials__icon:hover {
+    color: #292929;
 }

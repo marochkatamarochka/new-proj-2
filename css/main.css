@@ -732,6 +732,11 @@ a {
   -webkit-transform: translate(50%);
           transform: translate(50%);
 }
+@media screen and (max-width: 768px) {
+  .benefits__item:before {
+    display: none;
+  }
+}
 @media screen and (max-width: 480px) {
   .benefits__item:before {
     background: none;
@@ -777,9 +782,10 @@ a {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.1111111111rem;
+  padding: 1.6666666667rem;
 }
 
-.benefit__icon {
+.benefit__img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -839,7 +845,6 @@ a {
     margin-bottom: 1.7777777778rem;
   }
 }
-
 .reviews__display-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,10 +989,16 @@ a {
   color: inherit;
   position: relative;
   z-index: 1;
+  margin-bottom: 1.7777777778rem;
 }
 @media screen and (max-width: 768px) {
   .order-section__main-title {
     margin-bottom: 1.6666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order-section__main-title {
+    margin-bottom: 2.1666666667rem;
   }
 }
 
@@ -1357,6 +1368,7 @@ a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
+
 .socials__icon:hover {
   color: #292929;
 }
@@ -1383,5 +1395,87 @@ a {
   .header__phone-number {
     display: none;
   }
+}
+
+.dropdown {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.06);
+  color: #1E1F20;
+  border-radius: 0.2222222222rem;
+  text-align: left;
+  font-size: 0.8888888889rem;
+  line-height: 1.3333333333rem;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.long__wrapper-content:hover .dropdown {
+  opacity: 1;
+}
+
+.dropdown::before {
+  content: "";
+  display: block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #EDEDED;
+  position: absolute;
+}
+
+.dropdown::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dropdown__img {
+  width: 1.3333333333rem;
+  height: 1.3333333333rem;
+  margin-right: 0.8888888889rem;
+}
+
+.dropdown__text {
+  display: inline-block;
+}
+
+.long__content {
+  width: 40%;
+  display: inline-block;
+}
+
+.long__main-title {
+  font-size: 2rem;
+  line-height: 2.3888888889rem;
+}
+
+.long__wrapper {
+  display: inline-block;
+}
+
+.long__icon {
+  width: 2.1111111111rem;
+  height: 2.1111111111rem;
+}
+
+.long__text {
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+}
+
+.long__wrapper-text {
+  font-size: 14.01px;
+  line-height: 17px;
+}
+
+.long__image {
+  display: inline-block;
+  width: 40%;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
