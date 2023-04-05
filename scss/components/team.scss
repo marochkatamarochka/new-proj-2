@@ -1,0 +1,87 @@
+.team__title {
+    margin-bottom: rem(53px);
+
+    @include tablets {
+        margin-bottom: 33px;
+    }
+    @include phones {
+        margin-bottom: 36px;
+    }
+}
+.team__version {
+    display: flex;
+    justify-content: center;
+
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
+    @include phones {
+
+    }
+
+    &--mobile {
+    
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+    }
+}
+
+.team__item {
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+.team__avatar {
+    display: flex;
+    align-items: center;
+    width: rem(220px);
+    margin-bottom: rem(21px);
+    margin-right: rem(20px);
+
+
+ @include tablets {
+    display: none;
+ }
+
+ @include phones {
+width: 138px;
+ }
+}
+.team__title-name  {
+    font-size: rem(21px);
+    line-height: rem(25px);
+    align-items: center;
+    margin-bottom: rem(8px);
+    font-style: bold;
+
+    @include tablets {
+     margin-bottom: 16px;
+     }
+}
+.team__title-name {
+    border: none;
+    font-weight: bold;
+    color: #292929;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+}
+.team__content {
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+}
+.team__content-text {
+    color: #666666;
+}
+.team_line {
+    font-size: rem(18px);
+    margin-bottom: rem(4px);
+}
+
+.team__version--mobile {
+
+}

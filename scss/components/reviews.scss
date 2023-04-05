@@ -86,6 +86,14 @@
 .reviews__switcher {
     display: flex;
     justify-content: center;
+}
 
 
+
+.reviews__item {
+    display: none;
+
+    &--active {
+        display: block;
+    }
 }
