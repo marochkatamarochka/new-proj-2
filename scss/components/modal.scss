@@ -3,13 +3,10 @@
 
     &.error-modal {
         .modal__content {
-            color: #000;
+            color: red;
         }
     }
 
-    &.fancybox-content {
-        padding: 0 !important;
-    }
 
     .fancybox-button {
         display: none;
@@ -27,4 +24,7 @@
     font-size: rem(18px);
     line-height: rem(24px);
     margin-bottom: 15px;
+}
+.modal__button-container {
+    text-align: center;
 }

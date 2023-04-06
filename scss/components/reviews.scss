@@ -94,6 +94,11 @@
     display: none;
 
     &--active {
-        display: block;
+        display: flex;
+    }
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
     }
 }

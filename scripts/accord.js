@@ -10,7 +10,7 @@ contentBlock.height(reqHeight);
 }
 
 const closeEveryItem = container => {
-    const items = container.find('.team__container');
+    const items = container.find('.team__content');
     const itemContainer = container.find(".team__item");
 
     itemContainer.removeClass("active");

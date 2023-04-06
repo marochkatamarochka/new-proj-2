@@ -8,7 +8,7 @@ const validateFields = (form, fieldsArray) => {
     }
     })
     
-    const errorFields = form.find$(".input-error");
+    const errorFields = form.find(".input-error");
 
     return errorFields.length === 0;
 }
@@ -28,44 +28,29 @@ $('.form').submit(e => {
 
 const isValid = validateFields(form, [name, phone, comment, to]);
 
-
-
 if (isValid) {
 
     const request = $.ajax({
         url: "https://webdev-api.loftschool.com/sendmail",
-        method: "post"
+        method: "post",
         data: {
             name: name.val(),
             phone: phone.val(),
             comment: comment.val(),
             to: to.val()
         },
-        success: data => {
-        content.text(data.message);
-
-        //console.log(data);
-            $.fancybox.open({
-             src: "#modal",
-             type: "inline",
-            });
-        },
-        error: (data) => {
-            const message = data.responseJSON.message;
-            content.text(message);
-            modal.addClass("error-modal");
-
-            $.fancybox.open({
-                src: "#modal",
-                type: "inline",
-               });
-        }
+       
     });
     request.done((data) => {
         content.text(data.message);
     });
     request.fail(data => {
-        const message = data.responseJSON.message;
+        let message;
+        if (data && data.hasOwnProperty('responseJSON') && data.responseJSON.hasOwnProperty('message')) {
+            message = data.responseJSON.message;
+        } else {
+            message = 'Произошла ошибка, попробуйте позже';
+        }
         content.text(message);
         modal.addClass("error-modal");
     })

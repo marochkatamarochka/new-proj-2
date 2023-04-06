@@ -1,7 +1,7 @@
-const slider = $('.product').bxSlider([
+const slider = $('.long__slider').bxSlider({
     pager: false,
     controls: false
-]);
+});
 
 $('.slider__prod--back').click(e => {
     e.preventDefault();

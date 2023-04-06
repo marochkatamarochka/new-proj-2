@@ -2,15 +2,18 @@
 
 
 //normal
-
+.bx-wrapper {
+    box-shadow: none;
+}
 .slider__prod {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 
     @include tablets {
-    transform: initial;
-    top: rem(222px);
+        transform: initial;
+        top: rem(222px);
     }
 
     @include phones {
@@ -21,43 +24,46 @@
         left: rem(14px);
 
         @include tablets {
-    left: rem(136px);
+            left: rem(136px);
         }
 
         @include phones {
             left: 0;
-                }
+        }
     }
+
     &--next {
         right: rem(-49px);
 
         @include tablets {
             right: rem(136px);
-                }
+        }
 
-                @include phones {
-                    right: 0;  
-                        }
+        @include phones {
+            right: 0;
+        }
     }
 }
+
 .slider__icon {
     width: rem(13px);
     height: rem(27px);
 }
+
 .long__slide {
     display: flex;
     justify-content: flex-end;
 
     @include tablets {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
-    @include phones {
-    }
+    @include phones {}
 }
+
 .long__image {
     width: 44.6%;
     position: relative;
@@ -65,10 +71,10 @@
     margin-top: rem(-10px);
 
     @include tablets {
-     width: rem(318px);
-     height: rem(417px);
-     margin-right: 0;
-     margin-top: 0;
+        width: rem(318px);
+        height: rem(417px);
+        margin-right: 0;
+        margin-top: 0;
     }
 
     @include phones {
@@ -88,22 +94,26 @@
         background: url(../img/slider-bg.png) center / contain no-repeat;
     }
 }
+
 .long__image-file {
     position: relative;
     z-index: 1;
-max-width: 100%;
-max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+
 .long__wrapper {
     max-width: rem(368px);
 
     @include tablets {
-    max-width: rem(528px);
+        max-width: rem(528px);
     }
+
     @include phones {
         max-width: rem(373px);
     }
 }
+
 .long__params {
     display: inline-block;
     text-align: center;
@@ -114,16 +124,19 @@ max-height: 100%;
         display: none;
     }
 }
-.long__params-button{
+
+.long__params-button {
     background: #3A587E;
     border-radius: 4px;
     padding: rem(17px) rem(5px) rem(12px);
     color: #fff;
 }
+
 .long__params-icon {
     width: rem(38px);
     height: rem(38px);
 }
+
 .long__main-title {
     font-size: rem(36px);
     line-height: rem(43px);
@@ -132,9 +145,9 @@ max-height: 100%;
     text-transform: uppercase;
 
     @include tablets {
-    font-size: rem(30px);
-    line-height: rem(36px);
-    margin-bottom: rem(14px);
+        font-size: rem(30px);
+        line-height: rem(36px);
+        margin-bottom: rem(14px);
     }
 }
 
@@ -143,20 +156,23 @@ max-height: 100%;
     line-height: rem(22px);
     margin-bottom: rem(24px);
 }
+
 .long__params-text {
-font-weight: 700;
+    font-weight: 700;
     font-size: 14.01px;
-line-height: 17px;
-text-transform: uppercase;
+    line-height: 17px;
+    text-transform: uppercase;
 }
+
 .long__order {
     display: flex;
     align-items: center;
 
     @include tablets {
-    justify-content: center;
+        justify-content: center;
     }
 }
+
 .long__price {
     font-size: rem(60px);
     line-height: rem(60px);
@@ -165,20 +181,22 @@ text-transform: uppercase;
     margin-right: rem(57px);
 
     @include tablets {
-    margin-right: rem(40px);
+        margin-right: rem(40px);
     }
 }
-.prod{
+
+.prod {
     display: flex;
     align-items: center;
     margin-bottom: rem(24px);
 
     @include tablets {
-    justify-content: center;
-    text-align: left;
-    padding-left: rem(30px);
+        justify-content: center;
+        text-align: left;
+        padding-left: rem(30px);
     }
 }
+
 .prod__info {
     margin-right: rem(52px);
     line-height: rem(22px);
@@ -187,6 +205,7 @@ text-transform: uppercase;
         margin-right: 0;
     }
 }
+
 .prod__value {
-font-weight: bold;
+    font-weight: bold;
 }

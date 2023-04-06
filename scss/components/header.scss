@@ -32,6 +32,10 @@
 .menu__list {
     display: flex;
     align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .menu__item {
     margin-right: rem(22px);
@@ -39,10 +43,18 @@
     &:last-child {
         margin-right: 0;
     }
+    @include tablets {
+        margin: 0;
+    }
 }
 
 .menu__link {
     text-decoration: none;
     font-weight: 700;
     white-space: nowrap;
+
+    @include tablets {
+        font-size: rem(36px);
+        line-height: rem(72px);
+    }
 }
