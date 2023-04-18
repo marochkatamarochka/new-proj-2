@@ -11,9 +11,19 @@
 .fixed-menu__item {
     margin-bottom: rem(5px);
 
-    &--active {
+    &.is-active {
         .fixed-menu__link{
             border-color: #fff;
+        }
+    }
+    &.dark.is-active {
+        .fixed-menu__link {
+            border-color: black;
+        }
+    }
+    &.dark {
+        .fixed-menu__link::before {
+            background-color: black;
         }
     }
 }
@@ -24,6 +34,7 @@
     border: rem(1px) solid transparent;
     display: block;
     position: relative;
+    transition:  border-color .3s;
 
     &:before {
         content: "";
@@ -32,6 +43,7 @@
         height: rem(6px);
         border-radius: 50%;
         background: #fff;
+        transition: background-color .3s;
         position: absolute;
         top: 50%;
         left: 50%;

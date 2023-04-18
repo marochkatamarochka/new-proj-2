@@ -1,8 +1,33 @@
-.section--background {
-    background: url(/img/menu1.jpeg) center no-repeat;
-  }
+
 .menu-prod {
-  
+  position: relative;
+  background: url(../img/menu1.jpeg) center no-repeat;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 0.2);
+  }
+
+  &__main-title{
+    position: absolute;
+    left: rem(84px);
+    top: rem(109px);
+  color: inherit;
+  z-index: 1;
+
+  @include phones {
+    left: rem(10px);
+    top: rem(76px);
+  }
+  }
+
+  &__list{
     display: flex;
     position: absolute;
     top: 0;
@@ -10,7 +35,8 @@
     bottom: 0;
     width: 100%;
     justify-content: flex-end;
-
+    z-index: 2;
+}
   
     &__item {
       display: flex;
@@ -27,7 +53,7 @@
       }
   
       @include phones {
-        z-index: 0;
+      
 
         &--active {
           position: absolute;
@@ -44,6 +70,15 @@
       min-width: rem(100px);
       background: center center / cover no-repeat;
       position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 50%);
+      }
   
       &-text {
         position: absolute;
@@ -61,6 +96,7 @@
       width: 0;
       overflow: hidden;
       transition: width .3s linear;
+      background-color: rgb(0 0 0 / 0.7);
     }
   
     &__decs {
