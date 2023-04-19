@@ -7,12 +7,21 @@
 }
 
 .video__container {
-    height: 100vh;
-    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: rem(662px);
+    height: rem(391px);
+
+    @include tablets {
+        width: rem(594px);
+        height: rem(351px);
+    }
+    @include phones {
+        width: rem(394px);
+        height: rem(233px);
+    }
 }
 .video__player {
     width: 100%;
@@ -27,6 +36,9 @@
     transform: translate(-50%, -50%);
     cursor: pointer;
     visibility: visible;
+    &--active {
+        display: none;
+    }
 }
 .video__toolbar {
     height: 35px;
@@ -59,4 +71,9 @@
 } 
 .sound__img {
     cursor: pointer;
+    margin-right: rem(10px);
+}
+.sound__volume {
+display: flex;
+align-items: center;
 }

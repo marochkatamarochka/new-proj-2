@@ -28,13 +28,13 @@ task('clean', () => {
   return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
 });
 task("copy:html", () => {
-  return src(`${SRC_PATH}/*.html`).pipe(dest(`{$DIST_PATH}`)).pipe(reload({ stream: true }));
+  return src(`${SRC_PATH}/*.html`).pipe(dest(`${DIST_PATH}`)).pipe(reload({ stream: true }));
 });
 task("img", () => {
-  return src('src/img/**/*.*').pipe(dest(`{$DIST_PATH}/img` )).pipe(reload({ stream: true }));
+  return src('src/img/**/*.*').pipe(dest(`${DIST_PATH}/img` )).pipe(reload({ stream: true }));
 });
 task("video", () => {
-  return src('src/video/**/*.*').pipe(dest(`{$DIST_PATH}` )).pipe(reload({ stream: true }));
+  return src('src/video/**/*.*').pipe(dest(`${DIST_PATH}` )).pipe(reload({ stream: true }));
 });
 
 
