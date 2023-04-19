@@ -11,7 +11,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgb(0 0 0 / 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   &__main-title{
@@ -77,7 +77,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(0 0 0 / 50%);
+   background-color: rgba(0, 0, 0,  50%);;
       }
   
       &-text {
@@ -96,7 +96,7 @@
       width: 0;
       overflow: hidden;
       transition: width .3s linear;
-      background-color: rgb(0 0 0 / 0.7);
+      background-color: rgba(0, 0, 0,  0.7);
     }
   
     &__decs {

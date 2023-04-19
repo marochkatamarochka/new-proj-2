@@ -2,6 +2,9 @@ let video;
 let durationControl;
 let soundControl;
 let intervalid;
+let soundLevel;
+
+video = document.querySelector('#video');
 
 document.addEventListener('DOMContentLoaded', e=>{
   video.addEventListener('click', playStop);
@@ -13,8 +16,8 @@ let micControl = document.getElementById('micLevel');
 micControl.addEventListener('click' , soundOf);
 
 durationControl = document.getElementById('durationLevel');
-durationControl.addEventListener('mousedown', stopInterval);
-durationControl.addEventListener('click', setVideoDuration);
+//durationControl.addEventListener('mousedown', stopInterval);
+durationControl.addEventListener('input', setVideoDuration);
 
 durationControl.min = 0;
 durationControl.value = 0;
@@ -33,7 +36,7 @@ soundControl.value = soundControl.max;
 
 function playStop(){
   let playImg = document.querySelector('.video__play');
-  playImg.classList.toggle('.video__play--active');
+  playImg.classList.toggle('video__play--active');
 
   durationControl.max = video.duration;
 
@@ -44,6 +47,7 @@ function playStop(){
     video.pause();
     clearInterval(intervalid);
   }
+  updateDuration();
 }
 
 function updateDuration() {
@@ -51,16 +55,18 @@ function updateDuration() {
 }
 
 function stopInterval(){
-  video.paused();
+  video.pause();
   clearInterval(intervalid);
 }
 
 function setVideoDuration(){
-  if(video.paused){
-    video.play();
-  }else{
-    video.pause();
-  }
+  // if(video.paused){
+  //   video.play();
+  // }else{
+  //   video.pause();
+  // }
+  video.currentTime = durationControl.value;
+  intervalid = setInterval(updateDuration , 1000 /66);
 }
 
 function changeSoundVolume(){
